@@ -1,0 +1,1144 @@
+<!DOCTYPE HTML>
+
+	<HEAD>
+		<meta  name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<TITLE>Responsive Web U.I.</TITLE>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marvel&family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+<SCRIPT src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></SCRIPT>
+<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+		<SCRIPT>
+			$(document).ready(function(){
+var tab1=[{'Text':25000,'Text4':0,'Text2':0,'Text3':0},{'Text':25000,'Text2':0,'Text3':0,'Text4':0}];
+var tab2=[{'Text':25000,'Text4':0,'Text2':0,'Text3':0},{'Text':25000,'Text2':0,'Text3':0,'Text4':0}];
+var tab3=[{'Text':25000,'Text4':0,'Text2':0,'Text3':0},{'Text':25000,'Text2':0,'Text3':0,'Text4':0}];
+for(var i=0; i<tab2.length; i++){
+	var table = document.getElementById("tableData");
+var tr = document.createElement('tr');
+var td1 = document.createElement('td');
+var td2 = document.createElement('td');
+var td3 = document.createElement('td');
+var td4 = document.createElement('td');
+var td5 = document.createElement('td');
+var td6 = document.createElement('td');
+var td7 = document.createElement('td');
+var td8 = document.createElement('td');
+var inputText1 = document.createElement('input');
+inputText1.setAttribute('class','text1');
+inputText1.setAttribute('placeholder','placeholder');
+var inputText2 = document.createElement('input');
+inputText2.setAttribute('class','text2');
+inputText2.setAttribute('placeholder','placeholder');
+var inputText3 = document.createElement('input');
+inputText3.setAttribute('class','text3');
+inputText3.setAttribute('placeholder','placeholder');
+var inputText4 = document.createElement('input');
+inputText4.setAttribute('class','text4');
+inputText4.setAttribute('placeholder','placeholder');
+var inputNumber1 = document.createElement('input');
+inputNumber1.setAttribute('type','number');
+inputNumber1.setAttribute('class','numbers1');
+inputNumber1.setAttribute('placeholder','Enter a Number');
+var inputNumber2 = document.createElement('input');
+inputNumber2.setAttribute('type','number');
+inputNumber2.setAttribute('class','numbers2');
+inputNumber2.setAttribute('placeholder','Enter a Number');
+
+var inputNumber3 = document.createElement('input');
+inputNumber3.setAttribute('type','number');
+inputNumber3.setAttribute('class','numbers3');
+inputNumber2.setAttribute('placeholder','Enter a Number');
+var inputNumber4 = document.createElement('input');
+inputNumber4.setAttribute('type','number');
+inputNumber4.setAttribute('class','numbers4');
+inputNumber4.setAttribute('placeholder','Enter a Number');
+//inputText = inputText.setProperty('input','text');
+var val1 =Object.keys(tab2[i])[0];
+inputText1.value=  val1;
+var val2 =Object.keys(tab2[i])[1];
+inputText2.value=  val2;
+var val3 =Object.keys(tab2[i])[2];
+inputText3.value=  val3;
+var val4 =Object.keys(tab2[i])[3];
+inputText4.value=  val4;
+inputNumber1.value=  tab2[i][val1];
+inputNumber2.value = tab2[i][val2];
+inputNumber3.value = tab2[i][val3];
+inputNumber4.value = tab2[i][val4];
+console.log(val1,val2,val3,val4,Object.keys(tab2[i]))
+td1.appendChild(inputText1);
+td2.appendChild(inputNumber1);
+td3.appendChild(inputText2);
+td4.appendChild(inputNumber2);
+td5.appendChild(inputText3);
+td6.appendChild(inputNumber3);
+td7.appendChild(inputText4);
+td8.appendChild(inputNumber4);
+tr.appendChild(td1);
+tr.appendChild(td2);
+tr.appendChild(td3);
+tr.appendChild(td4);
+tr.appendChild(td5);tr.appendChild(td6);tr.appendChild(td7);
+tr.appendChild(td8);
+table.appendChild(tr);
+
+
+
+			}
+
+			
+var active_tab="tab2";
+$('#pg2container2').hide();
+$('#pg2container1').hide();
+$('#pg2container4').hide();
+
+
+
+				$('#pg1container2').click(	 function(){
+
+
+					$('#pg1container2').animate({left:'120%'},{delay:1000,duration:900,queue:false}); 	
+					$('#pg1container3').animate({left:'120%'},{delay:1200,duration:700,queue:false}); 
+					
+					$('#pg1container4').animate({left:'120%'},{delay:1500,duration:500,queue:false}); 
+					$('#pg1container1').animate({'margin-left':'-33%','opacity':'0'},{duration:1600,queue:false}); 
+
+				//	$('#pg1container1').fadeToggle({duration:1600,queue:false}); 
+				
+
+		//$('#mainFrame2').show({duration:1200,queue:false});
+
+
+
+  
+
+  $("#pg2container2").show("slide", {direction:"right", distance: 100000 ,queue:false}, 370); 
+
+
+
+//$('#pg2container2').show( "slide", { direction: "right" }, "slow" );
+$('#pg2container1').show({queue:false,delay:100});
+$('#pg2container4').show({queue:false,});
+
+$("#mainFrame").css("background-color","#FCF5E8");
+
+
+
+
+});
+	
+$('#arrow').click(function(){
+
+$('#pg2container2').hide("slide", {direction:"right", distance: 7000 ,queue:false}, 370);
+$('#pg2container1').hide({queue:false});
+$('#pg2container4').hide({queue:false});
+
+$("#mainFrame").css("background-color","white");
+$('#pg1container2').animate({left:'25%'},{delay:1000,duration:900,queue:false}); 	
+					$('#pg1container3').animate({left:'50%'},{delay:1200,duration:700,queue:false}); 
+					
+					$('#pg1container4').animate({left:'75%'},{delay:1500,duration:500,queue:false}); 
+					
+
+					$('#pg1container1').animate({'margin-left':'0%','opacity':'1'},{duration:1600,queue:false}); 
+					$("#mainFrame").css("background-color","transparent");
+					//$('#pg1container1').fadeToggle({queue:false}); 
+});
+$('#addBtn').click(	 function(){
+var table = document.getElementById("tableData");
+var tr = document.createElement('tr');
+var td1 = document.createElement('td');
+var td2 = document.createElement('td');
+var td3 = document.createElement('td');
+var td4 = document.createElement('td');
+var td5 = document.createElement('td');
+var td6 = document.createElement('td');
+var td7 = document.createElement('td');
+var td8 = document.createElement('td');
+var inputText1 = document.createElement('input');
+inputText1.setAttribute('class','text1');
+inputText1.setAttribute('placeholder','placeholder');
+var inputText2 = document.createElement('input');
+inputText2.setAttribute('class','text2');
+inputText2.setAttribute('placeholder','placeholder');
+var inputText3 = document.createElement('input');
+inputText3.setAttribute('class','text3');
+inputText3.setAttribute('placeholder','placeholder');
+var inputText4 = document.createElement('input');
+inputText4.setAttribute('class','text4');
+inputText4.setAttribute('placeholder','placeholder');
+var inputNumber1 = document.createElement('input');
+inputNumber1.setAttribute('type','number');
+inputNumber1.setAttribute('class','numbers1');
+inputNumber1.setAttribute('placeholder','Enter a Number');
+var inputNumber2 = document.createElement('input');
+inputNumber2.setAttribute('type','number');
+inputNumber2.setAttribute('class','numbers2');
+inputNumber2.setAttribute('placeholder','Enter a Number');
+var inputNumber3 = document.createElement('input');
+inputNumber3.setAttribute('type','number');
+inputNumber3.setAttribute('class','numbers3');
+inputNumber3.setAttribute('placeholder','Enter a Number');
+var inputNumber4 = document.createElement('input');
+inputNumber4.setAttribute('type','number');
+inputNumber4.setAttribute('class','numbers4');
+inputNumber4.setAttribute('placeholder','Enter a Number');
+//inputText = inputText.setProperty('input','text');
+
+
+td1.appendChild(inputText1);
+td2.appendChild(inputNumber1);
+td3.appendChild(inputText2);
+td4.appendChild(inputNumber2);
+td5.appendChild(inputText3);
+td6.appendChild(inputNumber3);
+td7.appendChild(inputText4);
+td8.appendChild(inputNumber4);
+tr.appendChild(td1);
+tr.appendChild(td2);
+tr.appendChild(td3);
+tr.appendChild(td4);
+tr.appendChild(td5);tr.appendChild(td6);tr.appendChild(td7);
+tr.appendChild(td8);
+table.appendChild(tr);
+
+});
+
+$('#saveBtn').click(	 function(){
+	console.log(document.getElementById('saveBtn').value)
+	if (document.getElementById('saveBtn').value =="Save"){
+		var edit=true;
+		var numbers1 = document.getElementsByClassName('numbers1');
+var numbers2 = document.getElementsByClassName('numbers2');
+var numbers3 = document.getElementsByClassName('numbers3');
+var numbers4= document.getElementsByClassName('numbers4');
+		for(var i=0; i<numbers4.length; i++){
+	if (numbers4[i].value==""){edit=false;
+		break;
+	}
+
+	
+}
+for(var i=0; i<numbers1.length; i++){
+	if (numbers1[i].value==""){edit=false;
+		break;
+	}
+
+	
+}
+for(var i=0; i<numbers2.length; i++){
+	if (numbers2[i].value==""){edit=false;
+		break;
+	}
+
+	
+}
+for(var i=0; i<numbers3.length; i++){
+	if (numbers3[i].value==""){edit=false;
+		break;
+	}
+
+	
+}
+var text1 = document.getElementsByClassName('text1');
+var text2 = document.getElementsByClassName('text2');
+var text3 = document.getElementsByClassName('text3');
+var text4= document.getElementsByClassName('text4');
+        for(var i=0; i<text4.length; i++){
+    if (text4[i].value==""){edit=false;
+        break;
+    }
+
+    
+}
+for(var i=0; i<text1.length; i++){
+    if (text1[i].value==""){edit=false;
+        break;
+    }
+
+    
+}
+for(var i=0; i<text2.length; i++){
+	console.log(numbers3[i].value)
+    if (text2[i].value==""){edit=false;
+        break;
+    }
+
+    
+}
+for(var i=0; i<text3.length; i++){
+    if (text3[i].value==""){edit=false;
+        break;
+    }
+
+    
+}
+
+console.log(edit)
+		if(edit){
+		$('#saveBtn').val("Edit");
+		$('#saveBtn').css({'background-color':"#FCF5E8"});
+		$('#saveBtn').css({'color':"black"});
+		var keys1 = document.getElementsByClassName("text1");
+			var keys2 = document.getElementsByClassName("text2");
+			var keys3 = document.getElementsByClassName("text3");
+var keys4 = document.getElementsByClassName("text4");
+			var numbers1 = document.getElementsByClassName('numbers1');
+var numbers2 = document.getElementsByClassName('numbers2');
+var numbers3 = document.getElementsByClassName('numbers3');
+var numbers4= document.getElementsByClassName('numbers4');
+console.log(keys1.length,keys2.length,numbers1.length,numbers2.length)
+if (active_tab=="tab2"){
+			tab2.splice(0,tab2.length);
+
+
+for(var i=0; i<numbers1.length; i++){
+				var temp_va = {}
+				temp_va[keys1[i].value]=  numbers1[i].valueAsNumber
+				temp_va[keys2[i].value]=  numbers2[i].valueAsNumber
+				temp_va[keys3[i].value]=  numbers3[i].valueAsNumber
+				temp_va[keys4[i].value]=  numbers4[i].valueAsNumber
+				tab2.push(temp_va);
+
+			}
+			console.log(tab2);
+
+		}else if (active_tab=="tab1"){
+			tab1.splice(0,tab1.length);
+
+var numbers4= document.getElementsByClassName('numbers4');
+for(var i=0; i<numbers1.length; i++){
+				var temp_va = {}
+				temp_va[keys1[i].value]=  numbers1[i]
+				temp_va[keys2[i].value]=  numbers2[i]
+				temp_va[keys3[i].value]=  numbers3[i]
+				temp_va[keys4[i].value]=  numbers4[i]
+				tab1.push(temp_va);
+
+			}
+
+		}else{
+			tab3.splice(0,tab3.length);
+
+var numbers4= document.getElementsByClassName('numbers4');
+for(var i=0; i<numbers.length; i++){
+				var temp_va = {}
+				temp_va[keys1[i].value]=  numbers1[i].valueAsNumber
+				temp_va[keys2[i].value]=  numbers2[i].valueAsNumber
+				temp_va[keys3[i].value]=  numbers3[i].valueAsNumber
+				temp_va[keys4[i].value]=  numbers4[i].valueAsNumber
+				tab3.push(temp_va);
+
+			}
+
+		}
+		alert("You data is saved.")
+		document.getElementById("addBtn").style.pointerEvents= 'none';
+		$(".numbers1").attr({"disabled":"disabled"});
+		$(".numbers2").attr({"disabled":"disabled"});
+		$(".numbers3").attr({"disabled":"disabled"});
+		$(".numbers4").attr({"disabled":"disabled"});
+		$(".text1").attr({"disabled":"disabled"});
+		$(".text2").attr({"disabled":"disabled"});
+		$(".text3").attr({"disabled":"disabled"});
+		$(".text4").attr({"disabled":"disabled"});
+	}else{
+		alert("Please fill values of the new row, you can leave one key blank if required (keys are unique)")
+	}
+
+	}else{
+		$('#saveBtn').val("Save")
+		$('#saveBtn').css({'background-color':"#E89572"});
+		document.getElementById("addBtn").style.pointerEvents= 'auto';
+		$(".numbers1").removeAttr("disabled");
+		$(".numbers2").removeAttr("disabled");
+		$(".numbers3").removeAttr("disabled");
+		$(".numbers4").removeAttr("disabled");
+		$(".text1").removeAttr("disabled");
+		$(".text2").removeAttr("disabled");
+		$(".text3").removeAttr("disabled");
+		$(".text4").removeAttr("disabled");
+	}
+
+
+});
+
+
+$(document).on("change","#tableData tr td input", function(){
+
+
+
+ var total = document.getElementById("totalInput");
+var numbers1 = document.getElementsByClassName('numbers1');
+var numbers2 = document.getElementsByClassName('numbers2');
+var numbers3 = document.getElementsByClassName('numbers3');
+var numbers4= document.getElementsByClassName('numbers4');
+
+var totalNumbers=0;
+for(var i=0; i<numbers1.length; i++){
+	if (numbers1[i].value!=""){
+totalNumbers = parseInt(numbers1[i].value)+totalNumbers;
+console.log(totalNumbers,numbers1[i].value);
+	}
+
+	
+}
+
+
+for(var i=0; i<numbers2.length; i++){
+	if (numbers2[i].value!=""){
+totalNumbers = parseInt(numbers2[i].value)+totalNumbers;
+console.log(totalNumbers,numbers2[i].value);
+	}
+
+	
+}
+
+
+for(var i=0; i<numbers3.length; i++){
+	if (numbers3[i].value!=""){
+totalNumbers = parseInt(numbers3[i].value)+totalNumbers;
+console.log(totalNumbers,numbers3[i].value);
+	}
+
+	
+}
+
+for(var i=0; i<numbers4.length; i++){
+	if (numbers4[i].value!=""){
+totalNumbers = parseInt(numbers4[i].value)+totalNumbers;
+console.log(totalNumbers,numbers4[i].value);
+	}
+
+	
+}
+
+
+
+console.log(totalNumbers,numbers1[0].value);
+$('#totalInput').val(totalNumbers);
+});
+
+$('#tab1').click(	 function(){
+	active_tab="tab1"
+	$("#tab1").css({'background-color':'#00506E'});
+	$("#tab2").css({'background-color':'#E89572'});
+	$("#tab3").css({'background-color':'##E89572'});
+	$("#tableData").find("tr:gt(0)").remove();
+	for(var i=0; i<tab1.length; i++){
+	var table = document.getElementById("tableData");
+	
+var tr = document.createElement('tr');
+var td1 = document.createElement('td');
+var td2 = document.createElement('td');
+var td3 = document.createElement('td');
+var td4 = document.createElement('td');
+var td5 = document.createElement('td');
+var td6 = document.createElement('td');
+var td7 = document.createElement('td');
+var td8 = document.createElement('td');
+var inputText1 = document.createElement('input');
+
+inputText1.setAttribute('class','text1');
+inputText1.setAttribute('placeholder','placeholder');
+var inputText2 = document.createElement('input');
+inputText2.setAttribute('class','text2');
+inputText2.setAttribute('placeholder','placeholder');
+var inputText3 = document.createElement('input');
+inputText3.setAttribute('class','text3');
+inputText3.setAttribute('placeholder','placeholder');
+var inputText4 = document.createElement('input');
+inputText4.setAttribute('class','text4');
+inputText4.setAttribute('placeholder','placeholder');
+var inputNumber1 = document.createElement('input');
+inputNumber1.setAttribute('type','number');
+inputNumber1.setAttribute('class','numbers1');
+inputNumber1.setAttribute('placeholder','Enter a Number');
+var inputNumber2 = document.createElement('input');
+inputNumber2.setAttribute('type','number');
+inputNumber2.setAttribute('class','numbers2');
+inputNumber2.setAttribute('placeholder','Enter a Number');
+var inputNumber3 = document.createElement('input');
+inputNumber3.setAttribute('type','number');
+inputNumber3.setAttribute('class','numbers3');
+inputNumber3.setAttribute('placeholder','Enter a Number');
+var inputNumber4 = document.createElement('input');
+inputNumber4.setAttribute('type','number');
+inputNumber4.setAttribute('class','numbers4');
+inputNumber4.setAttribute('placeholder','Enter a Number');
+
+//inputText = inputText.setProperty('input','text');
+//inputText = inputText.setProperty('input','text');
+var val1 =Object.keys(tab1[i])[0];
+inputText1.value=  val1;
+var val2 =Object.keys(tab1[i])[1];
+inputText2.value=  val2;
+var val3 =Object.keys(tab1[i])[2];
+inputText3.value=  val3;
+var val4 =Object.keys(tab1[i])[3];
+inputText4.value=  val4;
+inputNumber1.value=  tab1[i][val1];
+inputNumber2.value = tab1[i][val2];
+inputNumber3.value = tab1[i][val3];
+inputNumber4.value = tab1[i][val4];
+console.log(val1,val2,val3,val4,Object.keys(tab1[i]))
+
+td1.appendChild(inputText1);
+td2.appendChild(inputNumber1);
+td3.appendChild(inputText2);
+td4.appendChild(inputNumber2);
+td5.appendChild(inputText3);
+td6.appendChild(inputNumber3);
+td7.appendChild(inputText4);
+td8.appendChild(inputNumber4);
+tr.appendChild(td1);
+tr.appendChild(td2);
+tr.appendChild(td3);
+tr.appendChild(td4);
+tr.appendChild(td5);tr.appendChild(td6);tr.appendChild(td7);
+tr.appendChild(td8);
+table.appendChild(tr);
+
+
+
+			
+		}
+});
+$('#tab2').click(	 function(){
+	active_tab="tab2"
+	$("#tab2").css({'background-color':'#00506E'});
+	$("#tab3").css({'background-color':'#E89572'});
+	$("#tab1").css({'background-color':'#E89572'});
+	
+	$("#tableData").find("tr:gt(0)").remove();
+	for(var i=0; i<tab2.length; i++){
+	var table = document.getElementById("tableData");
+
+var tr = document.createElement('tr');
+var td1 = document.createElement('td');
+var td2 = document.createElement('td');
+var td3 = document.createElement('td');
+var td4 = document.createElement('td');
+var td5 = document.createElement('td');
+var td6 = document.createElement('td');
+var td7 = document.createElement('td');
+var td8 = document.createElement('td');
+var inputText1 = document.createElement('input');
+inputText1.setAttribute('class','text1');
+inputText1.setAttribute('placeholder','placeholder');
+var inputText2 = document.createElement('input');
+inputText2.setAttribute('class','text2');
+inputText2.setAttribute('placeholder','placeholder');
+var inputText3 = document.createElement('input');
+inputText3.setAttribute('class','text3');
+inputText3.setAttribute('placeholder','placeholder');
+var inputText4 = document.createElement('input');
+inputText4.setAttribute('class','text4');
+inputText4.setAttribute('placeholder','placeholder');
+var inputNumber1 = document.createElement('input');
+inputNumber1.setAttribute('type','number');
+inputNumber1.setAttribute('class','numbers1');
+inputNumber1.setAttribute('placeholder','Enter a Number');
+var inputNumber2 = document.createElement('input');
+inputNumber2.setAttribute('type','number');
+inputNumber2.setAttribute('class','numbers2');inputNumber2.setAttribute('placeholder','Enter a Number');
+var inputNumber3 = document.createElement('input');
+inputNumber3.setAttribute('type','number');
+inputNumber3.setAttribute('class','numbers3');
+inputNumber3.setAttribute('placeholder','Enter a Number');
+var inputNumber4 = document.createElement('input');
+inputNumber4.setAttribute('type','number');
+inputNumber4.setAttribute('class','numbers4');
+inputNumber4.setAttribute('placeholder','Enter a Number');
+//inputText = inputText.setProperty('input','text');
+//inputText = inputText.setProperty('input','text');
+var val1 =Object.keys(tab2[i])[0];
+inputText1.value=  val1;
+var val2 =Object.keys(tab2[i])[1];
+inputText2.value=  val2;
+var val3 =Object.keys(tab2[i])[2];
+inputText3.value=  val3;
+var val4 =Object.keys(tab2[i])[3];
+inputText4.value=  val4;
+inputNumber1.value=  tab2[i][val1];
+inputNumber2.value = tab2[i][val2];
+inputNumber3.value = tab2[i][val3];
+inputNumber4.value = tab2[i][val4];
+console.log(val1,val2,val3,val4,Object.keys(tab2[i]))
+
+td1.appendChild(inputText1);
+td2.appendChild(inputNumber1);
+td3.appendChild(inputText2);
+td4.appendChild(inputNumber2);
+td5.appendChild(inputText3);
+td6.appendChild(inputNumber3);
+td7.appendChild(inputText4);
+td8.appendChild(inputNumber4);
+tr.appendChild(td1);
+tr.appendChild(td2);
+tr.appendChild(td3);
+tr.appendChild(td4);
+tr.appendChild(td5);tr.appendChild(td6);tr.appendChild(td7);
+tr.appendChild(td8);
+table.appendChild(tr);
+
+
+
+			}
+		
+});
+$('#tab3').click(	 function(){
+	active_tab="tab3"
+	$("#tab3").css({'background-color':'#00506E'});
+	$("#tab1").css({'background-color':'#E89572'});
+	$("#tab2").css({'background-color':'#E89572'});
+	$("#tableData").find("tr:gt(0)").remove();
+	for(var i=0; i<tab3.length; i++){
+	var table = document.getElementById("tableData");
+
+var tr = document.createElement('tr');
+var td1 = document.createElement('td');
+var td2 = document.createElement('td');
+var td3 = document.createElement('td');
+var td4 = document.createElement('td');
+var td5 = document.createElement('td');
+var td6 = document.createElement('td');
+var td7 = document.createElement('td');
+var td8 = document.createElement('td');
+var inputText1 = document.createElement('input');
+inputText1.setAttribute('class','text1');
+inputText1.setAttribute('placeholder','placeholder');
+var inputText2 = document.createElement('input');
+inputText2.setAttribute('class','text2');
+inputText2.setAttribute('placeholder','placeholder');
+var inputText3 = document.createElement('input');
+inputText3.setAttribute('class','text3');
+inputText3.setAttribute('placeholder','placeholder');
+var inputText4 = document.createElement('input');
+inputText4.setAttribute('class','text4');
+inputText4.setAttribute('placeholder','placeholder');
+var inputNumber1 = document.createElement('input');
+inputNumber1.setAttribute('type','number');
+inputNumber1.setAttribute('class','numbers1');
+inputNumber1.setAttribute('placeholder','Enter a Number');
+var inputNumber2 = document.createElement('input');
+
+inputNumber2.setAttribute('type','number');
+inputNumber2.setAttribute('class','numbers2');
+inputNumber2.setAttribute('placeholder','Enter a Number');
+var inputNumber3 = document.createElement('input');
+inputNumber3.setAttribute('type','number');
+inputNumber3.setAttribute('class','numbers3');
+inputNumber3.setAttribute('placeholder','Enter a Number');
+var inputNumber4 = document.createElement('input');
+inputNumber4.setAttribute('type','number');
+inputNumber4.setAttribute('class','numbers4');
+inputNumber4.setAttribute('placeholder','Enter a Number');
+//inputText = inputText.setProperty('input','text');
+//inputText = inputText.setProperty('input','text');
+var val1 =Object.keys(tab3[i])[0];
+inputText1.value=  val1;
+var val2 =Object.keys(tab3[i])[1];
+inputText2.value=  val2;
+var val3 =Object.keys(tab3[i])[2];
+inputText3.value=  val3;
+var val4 =Object.keys(tab3[i])[3];
+inputText4.value=  val4;
+inputNumber1.value=  tab3[i][val1];
+inputNumber2.value = tab3[i][val2];
+inputNumber3.value = tab3[i][val3];
+inputNumber4.value = tab3[i][val4];
+console.log(val1,val2,val3,val4,Object.keys(tab3[i]))
+
+td1.appendChild(inputText1);
+td2.appendChild(inputNumber1);
+td3.appendChild(inputText2);
+td4.appendChild(inputNumber2);
+td5.appendChild(inputText3);
+td6.appendChild(inputNumber3);
+td7.appendChild(inputText4);
+td8.appendChild(inputNumber4);
+tr.appendChild(td1);
+tr.appendChild(td2);
+tr.appendChild(td3);
+tr.appendChild(td4);
+tr.appendChild(td5);tr.appendChild(td6);tr.appendChild(td7);
+tr.appendChild(td8);
+table.appendChild(tr);
+
+
+
+			
+		}
+});
+
+		});
+
+
+		</SCRIPT>
+
+		<STYLE>
+
+		html,body{
+height:100vh;
+width:100vw;
+text-align:center;
+background-color:green;
+overflow:hidden;
+}
+#pg1container1{
+
+position: absolute;
+width:23%;
+height:96%;
+top:2%;
+left:1%;
+background-image:URL("./image1.jpg");
+background-size:100% 100%;
+border-radius:1.6% ;
+box-shadow: 0px 0px 32px 10px grey;
+z-index:1;
+}
+#pg1container2{
+position: absolute;
+left:25%;
+width:24%;
+height:96%;
+top:2%;
+
+background-image:URL("./image2.jpg");
+background-size:100% 100%;
+border-radius:1.6% ;
+box-shadow: 0px 0px 32px 10px grey;
+z-index:1;
+}
+
+
+input{
+font-size:2vh;
+overflow:auto;
+height:90%;
+width:90%;
+border-radius:5% ;
+background-color: white;
+padding:2%;
+border:5px solid #E89572;
+box-shadow:inset 0px 0px 10px 2px grey;
+
+}
+#pg1container3{
+position: absolute;
+left:50%;
+width:24%;
+height:96%;
+top:2%;
+
+background-image:URL("./image3.jpg");
+background-size:100% 100%;
+border-radius:1.6% ;
+box-shadow: 0px 0px 32px 10px grey;
+z-index:1;
+}
+
+#pg1container4{
+position: absolute;
+left:75%;
+width:24%;
+height:96%;
+top:2%;
+background-image:URL("./image4.jpg");
+background-size:100% 100%;
+border-radius:1.6% ;
+box-shadow: 0px 0px 32px 10px grey;
+z-index:2;
+}
+
+
+#pg2container1{
+
+position: absolute;
+width:24%;
+height:100%;
+
+left:-15%;
+background-image:URL("./image2.jpg");
+background-size:100% 100%;
+z-index:1;
+
+}
+
+#pg2container2{
+position: absolute;
+left:9%;
+width:66%;
+height:100%;
+
+display:grid;
+background-color:#FCF5E8;
+background-size:100% 100%;
+grid-template-rows:10% 90%;
+}
+
+
+#pg2container2row1{
+position: absolute;
+left:1%;
+width:98%;
+height:80%;
+top:10%;
+grid-row-start:1;
+grid-row-end:1;
+
+border-radius:1.6% ;
+}
+
+
+#pg2container2row2{
+position: absolute;
+left:1%;
+width:98%;
+height:98%;
+bottom:2%;
+grid-row-start:2;
+grid-row-end:2;
+background-color:  #00506E;
+
+border-radius:1.6% ;
+overflow:auto;
+
+}
+#pg2container4{
+position: absolute;
+left:75%;
+width:24%;
+height:96%;
+top:2%;
+border:none;
+box-shadow: inset 0px 0px 52px 10px grey;
+display:grid;
+grid-template-rows: auto auto auto;
+border-radius:45px ;
+background-color:#FCF5E8;
+
+font-family: 'Open Sans', sans-serif;
+overflow:hidden;
+}
+
+#header{
+grid-row-start:1;
+grid-row-end:1;
+text-align:center;
+overflow:hidden;
+grid-template-rows:auto;
+}
+	
+#Title{
+
+width:70%;
+margin-left:15%;
+font-size:5vh;
+text-align:center;
+background-color: #FCF5E8;
+color:#2D5366;
+position: absolute;
+bottom:0;
+font-family: Marvel, sans-serif;
+grid-row-start:1;
+grid-row-end:1;
+overflow:hidden;
+text-transform:bold;
+letter-spacing:9px;
+padding-top:0.3%;
+padding-bottom:0.3%;
+border-radius:45px;
+box-shadow: 0px 0px 32px 10px grey;
+
+}
+
+#mainFrame{
+position:absolute;
+width:90%;
+height:90%;
+
+left:5%;
+top:5%;
+font-size:20px;
+text-align:center;
+grid-row-start:2;
+grid-row-end:2;
+overflow:hidden;
+background-color:transparent;
+
+
+}
+#mainFrame2{
+position:absolute;
+width:90%;
+height:90%;
+
+left:5%;
+top:5%;
+font-size:20px;
+text-align:center;
+grid-row-start:2;
+grid-row-end:2;
+overflow:hidden;
+background-color:#FCF5E8;
+border-radius:45px;
+
+}
+.paragraphs{
+color: #00506E;
+font-size:1.54vh;
+text-align:left;
+padding:3%;
+padding-right:5%;
+font-family:Open Sans,sans-serif;
+word-wrap: break-word;
+overflow-wrap:break-word;
+hyphens: auto;
+-ms-hyphens:auto;
+-webkit-hyphens:auto;
+
+
+}
+#mainPage{
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display: grid;
+grid-template-rows: 10% 90%;
+/*from figma*/
+background-image: radial-gradient(50% 50% at 50% 50%, #CEDCD7 0%, #9CB3B6 0.01%, #A4B9BD 31.77%, #90A9B1 93.23%);
+
+
+overflow:hidden;
+}
+th{
+font-size:2vh;
+
+}
+
+#row1{
+
+position:sticky;
+width:100%;
+color:white;
+overflow:auto;
+position:sticky;
+max-height:70%;
+
+}
+
+table{
+	position:relative;
+	width:100%;
+	
+
+}
+th{
+	position:sticky;
+	top:0;
+	Z-index:1;
+
+}
+td{
+	Z-index:0;
+}
+
+#row3{
+font-size:3vh;
+position:absolute;
+
+left:0;
+bottom:0;
+width:100%;
+min-height:15%;
+color:white;
+display:grid;
+grid-template-columns:39% 45% 16%;
+font-family:'Open Sans',sans-serif;
+
+overflow:auto;
+
+
+}
+
+#row2{
+position:sticky;
+height:10%;
+width:100%;
+bottom:10%;
+
+}
+#row3column1{
+
+min-height:100%;
+}
+#row3column2{
+
+height:100%;
+display:grid;
+grid-template-rows:auto auto;}
+#lblHint{
+	font-size:1.8vh;color:#00FF29;height:10%;
+	width:100%;
+	text-align:left;
+	grid-row-start: 1;
+	grid-row-end: 1;
+	
+}
+
+#totalInput{
+	background-color:white;border-radius:45px;width:80%;font-size:5vh;font-weight:600;text-align:right;
+	grid-row-start: 2;
+	grid-row-end: 2;
+	padding:0.9%;
+	color: #00506E;
+	box-shadow: inset 0px 0px 15px 5px grey;
+	border:none;
+	
+}
+#row3column3{
+	height:100%;
+
+}
+
+.buttonTabs{
+width:30%;
+height:100%;
+margin-left:3%;
+background-color:#E89572;
+font-size:2.5vh;
+text-align:left;
+color:white;
+border-radius:10px;
+border:none;
+padding:1%;
+box-shadow:0px 0px 25px 10px grey;
+
+}
+.buttonTabs:active{
+background-color:#00507E;
+}
+.buttonTabs:selected{
+background-color:#00507E;
+}
+</STYLE>
+	</HEAD>
+
+	<BODY>
+<DIV id="mainPage">
+
+		<DIV id="header">
+			<img style="position:absolute;top:3.9%;left:10%;height:5%;width:3%;" src="./arrow.jpg" id="arrow">
+			<div id="Title"><b>Title Goes Here</b></div>
+			
+		</DIV>
+
+		<DIV id = "mainFrame">
+			<DIV id="pg1container1">
+			</DIV>
+
+			<DIV id="pg1container2">
+			</DIV>
+
+			<DIV id="pg1container3">
+			</DIV>
+
+			<DIV id="pg1container4">
+			</DIV>
+		
+
+
+			
+
+				<DIV id="pg2container1">
+				</DIV>
+
+				<DIV id="pg2container2">
+					
+					<DIV id="pg2container2row1">
+						<BUTTON class="buttonTabs" id="tab1">Tab 1</BUTTON>
+
+						<BUTTON  class="buttonTabs" id="tab2">Tab 2</BUTTON>
+						<BUTTON class="buttonTabs" id="tab3">Tab 3</BUTTON>
+					</DIV>
+
+					<DIV id="pg2container2row2">
+<DIV id="row1">
+
+						<TABLE id="tableData" cellpadding=10 cellspacing=10>
+							<img src="./i.jpg"style="position:absolute;right:0;" height="100" width="100">
+							<TR>
+								<TH>Column 1 <br>And Line</TH>
+								<TH>Column 2 <br>Number</TH>
+								<TH>Column 3 <br>And Line</TH>
+								<TH>Column 4 <br>Number</TH>
+								<TH>Column 5 <br>And Line</TH>
+								<TH>Column 6 <br>Number</TH>
+								<TH>Column 7 <br>And Line</TH>
+								<TH>Column 8 <br>Number</TH>
+	
+							</TR>
+							
+							<TR id="tr"></TR>
+						</TABLE>
+					</DIV>
+
+						<DIV id="row2">
+
+
+							<div  style="border-radius:27px;box-shadow: 0px 0px 32px 10px #012430;text-align:left;font-size:2.5vh;background-color:#E89572;color:white;margin:auto;padding:1%;width:30%;" id="addBtn">
+							Add Another Row
+							<img src="./circle.jpg" style="text-align:right;width:10%;height:10%;border-radius:19%;">
+							</div>
+						</DIV>
+
+						
+						<DIV id="row3">
+							<DIV id="row3column1" style="font-size:2.5vw;">Total Size of TAB:</DIV>
+							<DIV id="row3column2">
+<Label id="lblHint">Hint: Sum of Column 1 and Column 3</LABEL><br>
+<INPUT type="text" id="totalInput" disabled value="50000" />
+							</DIV>
+							<DIV id="row3column3">
+								<input id="saveBtn" type="button"  style="margin-top:10%;padding:0;width:90%;height:66%;font-size:2.2vh;background-color:#E89572;color:white;" value="Save" />
+							</DIV>
+						</DIV>
+						
+					</DIV>
+
+
+				</DIV>
+
+				<DIV id="pg2container4">
+
+					<DIV class="paragraphs" lang="en">
+						<span style="font-size:2.1vh;"><b>Info Header 1</b></span>
+						<p><b>Info Header 1</b> is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</DIV>
+						<DIV class="paragraphs" lang="en">
+<span style="font-size:2.1vh;"><b>Info Header 2</b></span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</DIV>
+<DIV class="paragraphs" lang="en">
+<span style="font-size:2.1vh;"><b>Info Header 3</b></span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint </p>
+</DIV>			
+
+				</DIV>
+		
+
+
+
+			</DIV>	
+</DIV>
+	
+				</BODY>
+</HTML>
